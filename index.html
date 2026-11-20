@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasuke's Susanoo — 3D Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <canvas id="scene" aria-label="Scène 3D interactive du Susanoo"></canvas>
+    <section class="hud">
+      <div class="brand">
+        <span class="eyebrow">3D CHARACTER VIEWER</span>
+        <h1>SASUKE'S <em>SUSANO</em></h1>
+        <p>Explore le modèle avec la souris ou le clavier.</p>
+      </div>
+      <div class="help-card">
+        <strong>CONTRÔLES</strong>
+        <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> déplacer</span>
+        <span><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> pivoter</span>
+        <span><kbd>Molette</kbd> zoomer · glisser pour orbiter</span>
+        <button id="reset" type="button">Réinitialiser la vue</button>
+      </div>
+      <div id="loading" class="loading">Chargement du modèle<span>...</span></div>
+      <div id="error" class="error" hidden>Impossible de charger le modèle. Vérifie que le site est lancé depuis un serveur web.</div>
+    </section>
+    <footer>
+      <span>CC BY 4.0 · serienreviewer</span>
+      <a href="https://sketchfab.com/3d-models/sasukes-susano-4c706f01cd0c4fe19014f85b81d79b17" target="_blank" rel="noreferrer">Voir la source ↗</a>
+    </footer>
+  </main>
+  <script type="importmap">
+    {"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
